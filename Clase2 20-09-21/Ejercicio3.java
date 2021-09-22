@@ -22,14 +22,15 @@ public class Ejercicio3 {
 		/* Metodo insertion ordenar un arreglo de numeros usando ordenacion
 		 * por insercion*/
 		int k, t;
+		//k: variable para la posicion y t: variable temporal para guardar cada elemento del array
 		for(int i=0;i<a.length;i++) {
 			k = i;
 			t = a[i];
-			while(k	>0 && a[k-1]>t) { 
-				a[k]=a[k-1];
-				k--;
+			while(k	>0 && a[k-1]>t) { //si la posicion anterior es mayor que el temporal
+				a[k]=a[k-1];// cambia la posicion
+				k--;//volver a la posicion anterior
 			}
-			a[k]=t;
+			a[k]=t;//restablece el valor del temporal
 		}
 
 	}
