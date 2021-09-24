@@ -1,4 +1,4 @@
-package Lab2;
+package Clase2 20-09-21;
 
 import java.util.*;
 public class Ejercicio2_Time{
