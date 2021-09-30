@@ -3,7 +3,8 @@ package Lab3;
 //Ejercicio2
 public class E1_AlgoritmoOrdenamiento {
 	public int busquedaBinaria(int arreglo[], int elemento) {
-
+		//El ejercicio realiza la busqueda binaria dividiendo por la mitad el arreglo
+		// de numeros hasta encontrar el elemento y controla el tiempo que demora
 		int centro,primero,ultimo,valorCentro;
 		primero=0;
 		ultimo=arreglo.length-1;
