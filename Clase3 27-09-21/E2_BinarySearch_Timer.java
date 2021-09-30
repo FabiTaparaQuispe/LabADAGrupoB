@@ -28,14 +28,24 @@ public class E1_AlgoritmoOrdenamiento {
 		}
 		System.out.println();
 	}
+	public static int[] Array(int n) {
+
+		int[] array = new int[n];
+		for(int i = 0; i < n; i++) {
+			array[i] = (n - i);
+		}
+
+		return array;
+
+	}
 	public static void main(String[] args) {
 		E1_AlgoritmoOrdenamiento ordenar=new E1_AlgoritmoOrdenamiento();
-		int[] a = {1,2,3,5,5,7,9,10,14,15,18,40,50,50};
-		double inicioTime = System.nanoTime();
+		int[] a = Array(100);
+		double inicioTime = System.currentTimeMillis();
 		ordenar.mostrarArreglo(a);
 		int indice=ordenar.busquedaBinaria(a,17);
-		double finTime = System.nanoTime();
-		System.out.println("Se demoro: " + (finTime-inicioTime)  + " nanosegundos");
+		double finTime = System.currentTimeMillis();
+		System.out.println("Se demoro: " + (finTime-inicioTime)  + " milisegundos");
 		if(indice!=-1) {
 			System.out.println("Elemento 17 encontrado en el indice "+indice);
 		}else {
