@@ -1,9 +1,8 @@
-package Q1-Q12_timeComplex;
+package Lab5;
 /* 
  * Question N1
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * Q5: What is the time complexity of? O(n^2)
  * Q6: What is the time complexity of? O(n^1/2)
  * Q7: What is the time complexity of? O(log_2(n))
  * Q8: What is the time complexity of? O(log_2(n))
@@ -37,6 +36,10 @@ public class Q1_lineal {
 		System.out.println("Ejercicio4");
 		Q4Cuadratic(2);
 		Q4Cuadratic(8);
+		System.out.println();
+		System.out.println("Ejercicio5");
+		Q5Cuadratic(2);
+		Q5Cuadratic(8);
 	}
 
 	// A1: O(n)
@@ -81,6 +84,21 @@ public class Q1_lineal {
 		//O(n*(n+1))+(n+1) = O(n^2 + n) = O(n^2)
 		System.out.println("Acumulado: " + contador);
 	}
+	public static void Q5Cuadratic(int n) {
+		//Q5: What is the time complexity of? O(n^2)
+		int contador=0;
+		for(int i = 0; i < n; i++) { // Ciclo for de 'n' veces	
+			for(int j = 0; j < i; j++) { // Ciclo for de 'i' veces						
+				contador++;	// O(1)				
+			}			
+		}
+		//Explicacion: Se identifica una depencia de la segunda instruccion 
+		//a la primera por "j < i".
+		// 1 + 2 + 3 + ... + n = n * (n + 1) / 2
+		//O((n+1) * (n) / 2) = O(n^2 - n) = O(n^2)
+		System.out.println("Acumulado: " + contador);
+	}
+	
 
 
 }
