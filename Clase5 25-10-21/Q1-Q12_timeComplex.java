@@ -1,24 +1,17 @@
 package Lab5;
 /* 
- * Question N1
+ * Question N1-12
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * Q8: What is the time complexity of? O(log_2(n))
- * Q9: What is the time complexity of? O(sqrt(n))
- * Q10: What is the time complexity of? O(n)
- * Q11: What is the time complexity of? O(log log(n))
- * Q12: What is the time complexity of? O(n log(n))
- * 
- * // Review
- * for (i = 0; i < n; i++)       // O(n)
- * for (i = 0; i < n; i=i+2)     // O(n)
- * for (i = n; i >= 1; i--)      // O(n)
- * for (i = 1; i < n; i=i*2)     // O(log_2(n))
- * for (i = 1; i < n; i=i*3)     // O(log_3(n))
- * for (i = n; i >= 1; i=i/2)    // O(log_2(n))
+ * 				Implementar los 12 ejercicios de los algoritmos 
+ * vistos en clase para calcular el tiempo computacional
+ * Date: 25 october
  */
+
 public class Q1_lineal {
 	public static void main(String[] args) {
+		System.out.println("Casos de prueba Complexity Time");
+		System.out.println();
 		System.out.println("Ejercicio1");
 		Q1lineal(2);
 		Q1lineal(8);
@@ -38,13 +31,20 @@ public class Q1_lineal {
 		System.out.println("Ejercicio5");
 		Q5Cuadratic(2);
 		Q5Cuadratic(8);
+		System.out.println();
 		System.out.println("Ejercicio6");
 		Q6Square(2);
 		Q6Square(8);
+		System.out.println();
 		System.out.println("Ejercicio7");
 		Q7Log(2);
 		Q7Log(8);
-
+		Q7Log(16);
+		System.out.println();
+		System.out.println("Ejercicio8");
+		Q8Log(2);
+		Q8Log(8);
+		Q8Log(16);
 	}
 
 	// A1: O(n)
@@ -209,29 +209,62 @@ public class Q1_lineal {
 		 */
 	}
 	public static void Q8Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+		//Q8: What is the time complexity of? O(log_2(n))
 		int contador=0;
+		for(int i = 1; i < n; i = i / 2) {  // for mientras 'i >= 1'
+			contador++;	// O(1)
+		}
+		System.out.println("Acumulado: " + contador);
+		/*	 i       
+		------------------------
+		n
+		n / 2
+		n / 2^2
+		n / 2^3
+		.    
+		.    
+		.    
+		n / 2^k
 
+		Se realiza una division sucesiva, se iniciliza en "n" (valor maximo)
+		y se va diviendo hasta tener n / 2^k
+
+		Assume that i < 1 para que termine
+		Therefore n / 2^k < 1
+	    		  n / 2^k = 1
+	     		  n = 2^k  // Aplicamos log a ambos lados
+	   		  	  k = log_2(n)
+
+		A8: O(log_2(n)) 
+		 */
 	}
 	public static void Q9Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+		//Q9: What is the time complexity of? O(sqrt(n))
 		int contador=0;
 
 	}
 	public static void Q10Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+		//Q10: What is the time complexity of? O(n)
 		int contador=0;
 
 	}
 	public static void Q11Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+		//Q11: What is the time complexity of? O(log log(n))
 		int contador=0;
 
 	}
 	public static void Q12Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+
+		//Q12: What is the time complexity of? O(n log(n))
 		int contador=0;
 
 	}
-
+	/* Review
+	 * for (i = 0; i < n; i++)       // O(n)
+	 * for (i = 0; i < n; i=i+2)     // O(n)
+	 * for (i = n; i >= 1; i--)      // O(n)
+	 * for (i = 1; i < n; i=i*2)     // O(log_2(n))
+	 * for (i = 1; i < n; i=i*3)     // O(log_3(n))
+	 * for (i = n; i >= 1; i=i/2)    // O(log_2(n))
+	 */
 }
