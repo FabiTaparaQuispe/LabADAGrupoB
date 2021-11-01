@@ -25,7 +25,7 @@ public class E4_find_needle {
 			// Compara las letras que aun no fueron revisadas con las de la aguja
 			if(needle.charAt(needle_index) == haystack.charAt(haystack_index)) {
 				found_needle = true;
-				while(needle_index < needle.length()) { //Va iterando sobre la aguja---> O(2)
+				while(needle_index < needle.length()) { //Va iterando sobre la aguja---> O(1)
 					// Si algun caracter de la aguja no coincide con la palabra completa terminara el ciclo
 					if(needle.charAt(needle_index) != haystack.charAt(haystack_index + needle_index)) {				
 						found_needle = false;
@@ -48,7 +48,7 @@ public class E4_find_needle {
 	 * Explicacion: Se busca la subcadena en la posicion 1 y en esa posicion busca 
 	 * la siguiente cadena. Es decir, en la primera posicion de la palabra busca 
 	 * la secuencia de la aguja posicion por posicion e itera hasta que la encuentra 
-	 * o que los caracteres de la palabra sean menores que los caracteres de la aguja
+	 * o que los caracteres de la palabra sean menores que los caracteres de la aguja.
 	 * 
 	 * Quedaria:
 	 * 
