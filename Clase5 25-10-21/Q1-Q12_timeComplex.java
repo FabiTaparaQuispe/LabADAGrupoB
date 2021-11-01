@@ -3,6 +3,12 @@ package Lab5;
  * Question N1
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
+ * Q8: What is the time complexity of? O(log_2(n))
+ * Q9: What is the time complexity of? O(sqrt(n))
+ * Q10: What is the time complexity of? O(n)
+ * Q11: What is the time complexity of? O(log log(n))
+ * Q12: What is the time complexity of? O(n log(n))
+ * 
  * // Review
  * for (i = 0; i < n; i++)       // O(n)
  * for (i = 0; i < n; i=i+2)     // O(n)
@@ -35,6 +41,10 @@ public class Q1_lineal {
 		System.out.println("Ejercicio6");
 		Q6Square(2);
 		Q6Square(8);
+		System.out.println("Ejercicio7");
+		Q7Log(2);
+		Q7Log(8);
+
 	}
 
 	// A1: O(n)
@@ -108,19 +118,120 @@ public class Q1_lineal {
 	 	------------------------
 	  	1       0 + 1 = 1
 	  	2       1 + 2
-	 	3       1 + 2 + 3
-	        4       1 + 2 + 3 + 4
-	    	.    
-	    	.    
-	    	.    
-	    	k       1 + 2 + 3 + 4 + ... + k
+	    3       1 + 2 + 3
+	    4       1 + 2 + 3 + 4
+	    .    
+	    .    
+	    .    
+	    k       1 + 2 + 3 + 4 + ... + k
 
-	    	Condicion k > n   p>n
- 		k * (k + 1) / 2 > n
+	    Condicion k > n   p>n
+ 		k * (k + 1) / 2 > n //eliminamos los valores menos significativos y las constantes
 		k ^ 2 > n
 		k > sqrt(n)
  		O(n^(1/2))
 
 		 */
 	}
+	public static void Q7Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+		for(int i = 1; i < n; i = i * 2) { // for mientras i < n | Tenemos: i = 2 ^ k
+			contador++;	// O(1)
+		}
+		System.out.println("Acumulado: " + contador);
+		/*	
+	  	i       
+		------------------------
+		1       
+		1 * 2 = 2
+		2 * 2 = 2^2
+		2 * 2^2 = 2^3
+		.    
+		.    
+		.    
+		2^k
+		El valor inicial es i = 1, se va multiplicando por 2 sucesivamente
+		hasta llegar a 2^k
+
+		Assume i >= n
+		Therefore i = 2^k
+	    	2^k >= n
+	    	2^k = n
+	   		  k = log_2(n)
+
+		complexity = O(log_2(n))
+		------------------------
+		1. Comparacion con algorimto lineal
+
+		for (i = 1; i <= n; i++) {
+    		statement;
+		}
+			i = 1 + 1 + 1 + ... + 1 = n
+			     -------------------
+			           k = n
+		2. Comparacion con algorimto sqrt
+		for (i = 1; i < n; i = i*2) {
+    		statement;
+		}
+
+			i = 1 * 2 * 2 * ... * 2 = n
+			     -------------------
+			           2^k = n
+			             k = log_2(n)
+		--------------------------------------
+		Ejemplos:
+		for (i = 1; i < n; i = i*2) {
+    		statement;          // log(n)
+		}
+
+		Ejemplo1:  n = 8       
+		i       
+		------------------------
+		1
+		2
+		4
+		8 ❌ 
+		It is repeated 3 times, log_2(8) = 3 si cumple log(n)	
+
+		Ejemplo2: n = 10
+		i       
+		------------------------
+		1
+		2
+		4
+		8 
+		16 ❌  seria mayor que el valor de n 
+		It is repeated 4 times
+		log_2(8) = 3
+		log_2(10) = 3.322
+		So we must apply the ceil to log_2(n)
+		 */
+	}
+	public static void Q8Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+
+	}
+	public static void Q9Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+
+	}
+	public static void Q10Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+
+	}
+	public static void Q11Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+
+	}
+	public static void Q12Log(int n) {
+		//Q7: What is the time complexity of? O(log_2(n))
+		int contador=0;
+
+	}
+
 }
