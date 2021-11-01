@@ -25,7 +25,7 @@ package Ejercicios_Complejidad;
  * for (i = 1; i < n; i=i*3)     // O(log_3(n))
  * for (i = n; i >= 1; i=i/2)    // O(log_2(n))
  */
-public class Q1_timeComplex {
+public class Q1-Q12_timeComplex {
 	public static void main(String[] args) {
 		System.out.println("Ejercicio1");
 		Q1lineal(2);
