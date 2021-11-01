@@ -241,7 +241,19 @@ public class Q1_lineal {
 	public static void Q9Log(int n) {
 		//Q9: What is the time complexity of? O(sqrt(n))
 		int contador=0;
+		for(int i = 1; i * i < n; i++) { // For mientras "i * i < n"
+			contador++;	// O(1)
+		}
+		System.out.println("Acumulado: " + contador);
 
+		/*	
+		Condition       	i * i < n
+		Para que finalice el programa: 
+		To finish       	i * i >= n
+		We assume that     	i^2 = n
+	                    	i = sqrt(n)		
+		A9: O(sqrt(n))
+		 */
 	}
 	public static void Q10Log(int n) {
 		//Q10: What is the time complexity of? O(n)
