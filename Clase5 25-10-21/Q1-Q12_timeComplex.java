@@ -1,4 +1,4 @@
-package Lab5;
+package Q1-Q12_timeComplex;
 /* 
  * Question N1-12
  * Autor: Fabiola Tapara Quispe
@@ -60,6 +60,11 @@ public class Q1_lineal {
 		Q11LogLogTime(2);
 		Q11LogLogTime(8);
 		Q11LogLogTime(16);
+		System.out.println();
+		System.out.println("Ejercicio12");
+		Q12nLog(2);
+		Q12nLog(8);
+		Q12nLog(16);
 	}
 
 	// A1: O(n)
@@ -225,11 +230,9 @@ public class Q1_lineal {
 	}
 	public static void Q8Log(int n) {
 		//Q8: What is the time complexity of? O(log_2(n))
-		int contador=0;
-		for(int i = 1; i < n; i = i / 2) {  // for mientras 'i >= 1'
-			contador++;	// O(1)
+		for (int i = n; i >= 1; i = i/2) {  // for mientras 'i >= 1'
+			System.out.println(i);	// O(1)
 		}
-		System.out.println("Acumulado: " + contador);
 		/*	 i       
 		------------------------
 		n
@@ -318,18 +321,29 @@ public class Q1_lineal {
 		 * 			  Log2(Log2(n)) = q
 		 *Su valor depende del primer for, su tiempo es de log_2(p)
 		 *Finalmente seria: log(p) = log(log(n))
-		 
+
 		 *A11: O(log log(n))
 		 */
-		
+
 	}
-	public static void Q12Log(int n) {
+	public static void Q12nLog(int n) {
 
 		//Q12: What is the time complexity of? O(n log(n))
-		int contador=0;
-
+		for (int i = 0; i < n; i++) {				//(1)O(n)
+			for (int j = 1; j < n; j = j * 2) {     //(2)
+				System.out.println(i + " , " + j);  //(3)
+			}
+		}
+		/*Explicacion: 
+		 * El for interno j como no depende del for de afuera, su valor es de 
+		 * log(n)---> (2) and this inner loop n times * log(n)  
+		 * El for externo tiene un valor lineal ---> (1) This repeats n times 
+		 * Finalmente * multiplicando su tiempos obtendremos O( n * log(n)) 
+		 * (3) and this statement n times * log(n) Adding them together n + 2 n * log(n) 	 		 
+		
+		 * A12: O(nlog(n)) */
 	}
-	/* Review
+	/* Review Final
 	 * for (i = 0; i < n; i++)       // O(n)
 	 * for (i = 0; i < n; i=i+2)     // O(n)
 	 * for (i = n; i >= 1; i--)      // O(n)
