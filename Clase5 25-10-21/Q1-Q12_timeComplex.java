@@ -2,9 +2,8 @@ package Q1-Q12_timeComplex;
 /* 
  * Question N1-12
  * Autor: Fabiola Tapara Quispe
- * Description: Review of Time Complexity
- * 				Implementar los 12 ejercicios de los algoritmos 
- * vistos en clase para calcular el tiempo computacional
+ * Description: Review of Time Complexity, implementar los 12 
+ * ejercicios de los algoritmos vistos en clase para calcular el tiempo computacional
  * Date: 25 october
  */
 
@@ -138,14 +137,14 @@ public class Q1_lineal {
 	 	------------------------
 	  	1       0 + 1 = 1
 	  	2       1 + 2
-	    3       1 + 2 + 3
-	    4       1 + 2 + 3 + 4
-	    .    
-	    .    
-	    .    
-	    k       1 + 2 + 3 + 4 + ... + k
+	   	3       1 + 2 + 3
+	    	4       1 + 2 + 3 + 4
+	    		.    
+	    		.    
+	   		.    
+	    		k       1 + 2 + 3 + 4 + ... + k
 
-	    Condicion k > n   p>n
+	   	Condicion k > n   p>n
  		k * (k + 1) / 2 > n //eliminamos los valores menos significativos y las constantes
 		k ^ 2 > n
 		k > sqrt(n)
@@ -343,6 +342,7 @@ public class Q1_lineal {
 		
 		 * A12: O(nlog(n)) */
 	}
+	
 	/* Review Final
 	 * for (i = 0; i < n; i++)       // O(n)
 	 * for (i = 0; i < n; i=i+2)     // O(n)
