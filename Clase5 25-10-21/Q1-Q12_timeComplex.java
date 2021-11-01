@@ -3,14 +3,6 @@ package Lab5;
  * Question N1
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * Q6: What is the time complexity of? O(n^1/2)
- * Q7: What is the time complexity of? O(log_2(n))
- * Q8: What is the time complexity of? O(log_2(n))
- * Q9: What is the time complexity of? O(sqrt(n))
- * Q10: What is the time complexity of? O(n)
- * Q11: What is the time complexity of? O(log log(n))
- * Q12: What is the time complexity of? O(n log(n))
- * 
  * // Review
  * for (i = 0; i < n; i++)       // O(n)
  * for (i = 0; i < n; i=i+2)     // O(n)
@@ -40,6 +32,9 @@ public class Q1_lineal {
 		System.out.println("Ejercicio5");
 		Q5Cuadratic(2);
 		Q5Cuadratic(8);
+		System.out.println("Ejercicio6");
+		Q6Square(2);
+		Q6Square(8);
 	}
 
 	// A1: O(n)
@@ -92,13 +87,40 @@ public class Q1_lineal {
 				contador++;	// O(1)				
 			}			
 		}
-		//Explicacion: Se identifica una depencia de la segunda instruccion 
-		//a la primera por "j < i".
-		// 1 + 2 + 3 + ... + n = n * (n + 1) / 2
-		//O((n+1) * (n) / 2) = O(n^2 - n) = O(n^2)
+		/* Explicacion: Se identifica una depencia de la segunda instruccion 
+		   a la primera por "j < i".
+		   1 + 2 + 3 + ... + n = n * (n + 1) / 2
+		   O((n+1) * (n) / 2) = O(n^2 - n) = O(n^2)*/
+
 		System.out.println("Acumulado: " + contador);
 	}
-	
+	public static void Q6Square(int n) {
+		//Q6: What is the time complexity of? O(n^1/2)
+		int contador=0;
+		int p = 0;	
+		for(int i = 1; p <= n; i++) { // Ciclo for p < n
+			contador++;		// O(1)			
+			p = p + i;		
+		}
+		System.out.println("Acumulado: " + contador);
+		/*  A6 Explicacion:
+	 	i       p
+	 	------------------------
+	  	1       0 + 1 = 1
+	  	2       1 + 2
+	 	3       1 + 2 + 3
+	        4       1 + 2 + 3 + 4
+	    	.    
+	    	.    
+	    	.    
+	    	k       1 + 2 + 3 + 4 + ... + k
 
+	    	Condicion k > n   p>n
+ 		k * (k + 1) / 2 > n
+		k ^ 2 > n
+		k > sqrt(n)
+ 		O(n^(1/2))
 
+		 */
+	}
 }
