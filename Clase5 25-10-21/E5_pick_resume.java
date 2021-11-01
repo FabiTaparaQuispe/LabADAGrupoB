@@ -9,8 +9,8 @@ public class E5_pick_resume {
 	 * Answer: La complejidad es de O(log2(n))
 	 */
 	public static void main(String[] args) {
-		String palabra = "anything";
-		pick_resume(palabra);
+		String word = "anything"; // caso de prueba
+		pick_resume(word);
 	}
 
 	public static void pick_resume(String resumes) {
@@ -31,8 +31,8 @@ public class E5_pick_resume {
 
 	/* Explicacion:
 	 * En cada ejecucion la cantidad de caracteres de una palabra se reduce a su mitad,
-	 * debido a que el while dura hasta que la longitud de "resume" sea mayor a 1
-	 * seria como un arbol con profundidad 2: log_2(n)
+	 * debido a que el while dura hasta que la longitud "resume" sea mayor a 1.
+	 * Seria como un arbol con profundidad 2: log_2(n)
 	 * Calculos como se vio en el Ejercicio 7 de los ejercicios de Time Complexity	
 	  
 	  	i       
@@ -53,9 +53,7 @@ public class E5_pick_resume {
 	    	2^k >= n
 	    	2^k = n
 	   		  k = log_2(n)
-
 		complexity = O(log_2(n))
-	 
 	 * Answer: La complejidad es de O(log2(n))
 	 */
 }
