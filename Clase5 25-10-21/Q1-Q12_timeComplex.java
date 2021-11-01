@@ -45,6 +45,16 @@ public class Q1_lineal {
 		Q8Log(2);
 		Q8Log(8);
 		Q8Log(16);
+		System.out.println();
+		System.out.println("Ejercicio9");
+		Q9SquareMult(2);
+		Q9SquareMult(8);
+		Q9SquareMult(16);
+		System.out.println();
+		System.out.println("Ejercicio10");
+		Q10Linel2For(2);
+		Q10Linel2For(8);
+		Q10Linel2For(16);
 	}
 
 	// A1: O(n)
@@ -238,7 +248,7 @@ public class Q1_lineal {
 		A8: O(log_2(n)) 
 		 */
 	}
-	public static void Q9Log(int n) {
+	public static void Q9SquareMult(int n) {
 		//Q9: What is the time complexity of? O(sqrt(n))
 		int contador=0;
 		for(int i = 1; i * i < n; i++) { // For mientras "i * i < n"
@@ -255,10 +265,19 @@ public class Q1_lineal {
 		A9: O(sqrt(n))
 		 */
 	}
-	public static void Q10Log(int n) {
+	public static void Q10Linel2For(int n) {
 		//Q10: What is the time complexity of? O(n)
-		int contador=0;
-
+		int contador=0;									 		
+		for (int i = 0; i < n; i++) {															
+			System.out.println(i);	//n					
+		}   									   							
+		for (int j = 0; j < n; j++) {					
+			System.out.println(j);	//n
+		}   
+		//2*n
+		//En este caso son 2 for separados, por lo que el tiempo de cada uno es de O(n)
+		//obteniendo como resultado final O( 2 * n ), quitando la constante seria O(n)
+		//A10: O(n)
 	}
 	public static void Q11Log(int n) {
 		//Q11: What is the time complexity of? O(log log(n))
