@@ -7,7 +7,7 @@ package Clase5 25-10-21;
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q9_SquareMult {
+public class Q009_SquareMult {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
