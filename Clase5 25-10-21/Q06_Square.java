@@ -3,11 +3,11 @@ package Clase5 25-10-21;
  * Question N6
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * 				Implementar el ejercicio 6 del algoritmos 
+ * 		Implementar el ejercicio 6 del algoritmos 
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q006_Square {
+public class Q06_Square {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
@@ -25,20 +25,22 @@ public class Q006_Square {
 		for(int i = 1; p <= n; i++) { // Ciclo for p < n
 			contador++;		// O(1)			
 			p = p + i;
-			System.out.println("Acumulado: " + p);
+			System.out.println(p);
 		}
+		System.out.println("Numeros repetidos: " + contador);
+		System.out.println();
 		
 		/*  A6 Explicacion:
 	 	i       p
 	 	------------------------
 	  	1       0 + 1 = 1
 	  	2       1 + 2
-	    3       1 + 2 + 3
-	    4       1 + 2 + 3 + 4
-	    .    
-	    .    
-	    .    
-	    k       1 + 2 + 3 + 4 + ... + k
+	   	3       1 + 2 + 3
+	 	4       1 + 2 + 3 + 4
+	    	.    
+	    	.    
+	    	.    
+	    	k       1 + 2 + 3 + 4 + ... + k
 
 	    Condicion k > n   p>n
  		k * (k + 1) / 2 > n //eliminamos los valores menos significativos y las constantes
@@ -48,5 +50,4 @@ public class Q006_Square {
 
 		 */
 	}
-	
 }
