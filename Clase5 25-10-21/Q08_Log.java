@@ -1,13 +1,13 @@
-package Lab5;
+package Clase5 25-10-21;
 /* 
  * Question N8
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * 				Implementar el ejercicio 8 del algoritmos 
+ * 		Implementar el ejercicio 8 del algoritmos 
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q008_Log {
+public class Q08_Log {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
@@ -21,9 +21,13 @@ public class Q008_Log {
 	public static void Q8Log(int n) {
 		//Q8: What is the time complexity of? 
 		//A8: O(log_2(n))
+		int contador = 0;
 		for (int i = n; i >= 1; i = i/2) {  // for mientras 'i >= 1'
 			System.out.println(i);	// O(1)
+			contador++;	
 		}
+		System.out.println("Numeros repetidos: " + contador);
+		System.out.println();
 		/*	 i       
 		------------------------
 		n
