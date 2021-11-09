@@ -3,17 +3,20 @@ package Clase5 25-10-21;
  * Question N5
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * 				Implementar el ejercicio 5 del algoritmos 
+ * 		Implementar el ejercicio 5 del algoritmos 
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q005_cuadratic {
+public class Q05_cuadratic {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
 		System.out.println("Ejercicio5");
+		System.out.println("con n=2");
 		Q5Cuadratic(2);
-		Q5Cuadratic(4);
+		System.out.println();
+		System.out.println("con n=5");
+		Q5Cuadratic(5);
 	}
 
 	public static void Q5Cuadratic(int n) {
@@ -23,8 +26,11 @@ public class Q005_cuadratic {
 		for(int i = 0; i < n; i++) { // Ciclo for de 'n' veces	
 			for(int j = 0; j < i; j++) { // Ciclo for de 'i' veces						
 				System.out.println(i + " - " + j);	// O(1)				
+				contador++;
 			}			
 		}
+		System.out.println("Numeros repetidos: " + contador);
+		System.out.println();
 	}
 	//Explicacion en clase
 	/*	Tiempo de las variables
