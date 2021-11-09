@@ -12,8 +12,11 @@ public class Q001_lineal {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
 		System.out.println("Ejercicio1");
+		System.out.println("con n=2");
 		Q1lineal(2);
-		Q1lineal(8);
+		System.out.println();
+		System.out.println("con n=4");
+		Q1lineal(4);
 	}
 
 	// A1: O(n)
@@ -22,8 +25,9 @@ public class Q001_lineal {
 
 		int contador=0;
 		for (int i = 0; i < n; i++) { // Se ejecuta "n+1" veces O(n)
-			contador++;   // Se ejecuta "n" veces         
+			contador++;   // Se ejecuta "n" veces
+			System.out.println(i);
 		}
-		System.out.println("Acumulado: " + contador);
+		System.out.println("Numeros: " + contador);
 	}
 }
