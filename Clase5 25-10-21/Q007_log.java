@@ -7,7 +7,7 @@ package Clase5 25-10-21;
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q7_log {
+public class Q007_log {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
