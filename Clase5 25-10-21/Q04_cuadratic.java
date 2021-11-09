@@ -29,7 +29,7 @@ public class Q04_cuadratic {
 				System.out.println(i + " - " + j);
 			}
 		}
-		//O(n*(n+1))+(n+1) = O(n^2 + n) = O(n^2)
+		//O((n - 1) * (n - 1)) = O(n^2 - 2n - 1) = O(n^2)
 		System.out.println("Numeros repetidos: " + contador);
 	}
 }
