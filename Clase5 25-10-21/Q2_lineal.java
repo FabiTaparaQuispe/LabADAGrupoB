@@ -1,5 +1,12 @@
 package Clase5 25-10-21;
-
+/* 
+ * Question N2
+ * Autor: Fabiola Tapara Quispe
+ * Description: Review of Time Complexity
+ * 				Implementar el ejercicio 2 del algoritmos 
+ * visto en clase para calcular el tiempo computacional
+ * Date: 25 october
+ */
 public class Q2_lineal {
 	public static void main(String[] args) {
 		//Casos de prueba Complexity Time
