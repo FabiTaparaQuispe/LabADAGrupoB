@@ -3,11 +3,11 @@ package Clase5 25-10-21;
  * Question N7
  * Autor: Fabiola Tapara Quispe
  * Description: Review of Time Complexity
- * 				Implementar el ejercicio 7 del algoritmos 
+ * 		Implementar el ejercicio 7 del algoritmos 
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q007_log {
+public class Q07_log {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
@@ -19,11 +19,15 @@ public class Q007_log {
 		Q7Log(4);
 	}
 	public static void Q7Log(int n) {
-		//Q7: What is the time complexity of? O(log_2(n))
+		//Q7: What is the time complexity of? 
+		//A7: O(log_2(n))
 		int contador=0;
 		for(int i = 1; i < n; i = i * 2) { // for mientras i < n | Tenemos: i = 2 ^ k
 			System.out.println(i);// O(1)
+			contador++;
 		}
+		System.out.println("Numeros Repetidos: " + contador);
+		System.out.println();
 		/*	
 	  	i       
 		------------------------
