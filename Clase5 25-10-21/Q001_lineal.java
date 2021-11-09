@@ -7,7 +7,7 @@ package Clase5 25-10-21;
  * Date: 25 october
  */
 
-public class Q1_lineal {
+public class Q001_lineal {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
