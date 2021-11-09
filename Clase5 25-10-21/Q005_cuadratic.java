@@ -7,7 +7,7 @@ package Clase5 25-10-21;
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q5_cuadratic {
+public class Q005_cuadratic {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
