@@ -7,7 +7,7 @@ package Clase5 25-10-21;
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
-public class Q009_SquareMult {
+public class Q09_SquareMult {
 	public static void main(String[] args) {
 		System.out.println("Casos de prueba Complexity Time");
 		System.out.println();
@@ -22,9 +22,13 @@ public class Q009_SquareMult {
 	public static void Q9SquareMult(int n) {
 		//Q9: What is the time complexity of? 
 		//A9: O(sqrt(n))
+		int contador = 0;
 		for(int i = 0; i * i < n; i++) { // For mientras "i * i < n"
+			contador++;
 			System.out.println(i);		// O(1)
 		}
+		System.out.println("Numeros acumulados: " + contador);
+		System.out.println();
 
 		/*	
 		Condition       	i * i < n
