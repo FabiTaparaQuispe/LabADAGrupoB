@@ -2,8 +2,7 @@ package Clase5 25-10-21;
 /* 
  * Question N1
  * Autor: Fabiola Tapara Quispe
- * Description: Review of Time Complexity
- * 				Implementar el ejercicio 1 del algoritmos 
+ * Description: Review of Time Complexity. Implementar el ejercicio 1 del algoritmos 
  * visto en clase para calcular el tiempo computacional
  * Date: 25 october
  */
