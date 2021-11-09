@@ -9,10 +9,10 @@ public class Q2_lineal {
 		Q2lineal(8);
 		Q2lineal(16);
 	}
-	
+	// A2: O(n)
 	public static void Q2lineal(int n) {
 		//Q2: What is the time complexity of? O(n)
-    //Codigo individual
+   		 //Codigo individual
 		int contador=0;
 		for (int i = n; i > 0; i--) { // Decrementa i-- O(n)
 			contador++;   // O(n)        
