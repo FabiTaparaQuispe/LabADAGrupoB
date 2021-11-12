@@ -1,4 +1,11 @@
 #include <iostream>
+/* 
+ * Ejercicio 4 DFS Matriz
+ * Autor: Fabiola Tapara Quispe
+ * Description: Matriz delimitada a un espacio que elige una ficha al azar 
+                mediante el algoritmo de DFS y se expande alrededor
+ * Date: 08/11/21 
+ */
 
 using namespace std;
 
