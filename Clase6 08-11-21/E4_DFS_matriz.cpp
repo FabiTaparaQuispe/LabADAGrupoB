@@ -34,7 +34,7 @@ void llenado(int matriz[][6],int filas, int columnas, int posx,int posy){
 }
 
 
-int main(){
+int E4_DFS_matriz(){
    int matriz[][6]={{1,1,1,1,1,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,1,1,1,1,1}};
    print(matriz,6,6);
    llenado(matriz,6,6,1,1);
