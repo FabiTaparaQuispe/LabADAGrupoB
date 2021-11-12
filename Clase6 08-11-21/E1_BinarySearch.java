@@ -1,4 +1,5 @@
 package Clase6 08-11-21;
+import java.util.Scanner;
 /* 
  * Ejercicio 1 BynarySearch
  * Autor: Fabiola Tapara Quispe
@@ -7,40 +8,41 @@ package Clase6 08-11-21;
  * Date: 08/11/21 
 */
 
-
-import java.util.Scanner;
-
 class E1_BinarySearch {
-	int binarySearch(int array[], int target, int l, int r) {
+	public static void main(String args[]) {
+		int[] array = { 2, 3, 6, 6, 7, 9, 15, 19 };
+		Scanner s = new Scanner(System.in);
+		System.out.println("Ingrese el valor a buscar: ");
+		int numberSearch = s.nextInt();
+		System.out.println((binarySearch(array, numberSearch)));
+
+	}
+	public static int binarySearch(int[] array, int numberSearch) {
+		/*  Este metodo recibe un arreglo y el numero a buscar
+		 *  devuelve "-1" si no se encuentra el numero.
+		 */
 		int mid=0;
-		while (l <= r) {
-			mid = l + (r - l) / 2;
-			if (array[mid] == target) {
-				return array[mid-1];
+		int l = 0;
+		int r = array.length-1;
+		while (l <= r) {	
+			mid = l + (r - l) / 2; // punto medio del arreglo
+			if (array[mid] == numberSearch) {
+				// Si el numero "mid" es igual al numeroBuscado se encontro
+				System.out.print("Se encontro el numero ");
+				return array[mid];
 			}
-				
-			if (array[mid] < target)
+
+			if (array[mid] < numberSearch)
+				// Si el numero "mid" es menor, buscar en la mitad superior
 				l = mid + 1;
 			else
+				// Si el numero "mid" es mayor, buscar en la mitad inferior
 				r = mid - 1;
 		}
-		return array[mid-1];
-	}
+		System.out.println("No se encontro el numero " + numberSearch);
 
-	public static void main(String args[]) {
-		E1_BinarySearch obj = new E1_BinarySearch();
-		int[] array = { 2, 3, 6, 6, 7, 9, 15, 19 };
-		
-		int n = array.length;
-		Scanner input = new Scanner(System.in);
-		System.out.println("Encuentre el primer valor menor a:");
-		int element = input.nextInt();
-		input.close();
-		int result = obj.binarySearch(array, element, 0, n - 1);
-		if (result == -1)
-			System.out.println("No se encontro");
-		else
-			System.out.println("El elemento menor es: " + result);
+		return -1; // si no se encuentra el numero buscado
 	}
-	
 }
+
+
