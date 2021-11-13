@@ -2,6 +2,12 @@
 #include <cstdlib>
 #include<fstream>
 #include<bits/stdc++.h>
+/* 
+ * Ejercicio 4 DFS Implementacion
+ * Autor: Fabiola Tapara Quispe
+ * Description: Implementacion del algoritmo DFS fstream y ostream
+ * Date: 08/11/21 
+ */
 using namespace std;
 //Primero generamos una matriz que contenga ceros para asi crear poco a poco el grafo con camino basico pseudoaleatorio
 void vacio(int **Ma, int fil){
@@ -48,32 +54,7 @@ void mostrar(int **Ma, int fil){
         cout<<endl;
     }
 }
-//Creamos el archivo .dot para ver el grafo conexo
-void graphviz(int **Ma, int fil)
-{
-    cout<<"LISTA DE ADYACENCIA"<<endl;
-    ofstream f;
-    f.open("E:\\CS COMPUTACION\\SEGUNDO SEMESTRE\\ED2\\LABORATORIO\\Graphviz\\bin\\grafoconexo.dot");
-    f<<"graph A {"<<endl;
-    cout<<"graph A {"<<endl;
-    for(int i=0; i<fil;i++)
-    {
-        for(int j=0; j<fil; j++)
-        {
-            if(j>=i)
-            {
-                if(Ma[i][j]==1)
-                    {
-                        f<<i<<" -- "<<j<<";"<<endl;
-                        cout<<i<<" -- "<<j<<";"<<endl;
-                    }
-            }
-        }
-    }
-    f<<"}";
-    cout<<"}"<<endl;
-    f.close();
-}
+
 //Creamos una lista de adyacencia que usaremos para la busqueda en profundidad y en anchura
 void crearlista(vector<int> adyacencia[],int& numero,int**& matriz,int& inicio,vector<int>& indices){
 
