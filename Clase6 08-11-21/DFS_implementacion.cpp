@@ -205,9 +205,8 @@ void BFS(vector<int> adj[], int V,vector<int>& indices)
 
 
 
-int main()
-{
-    //Parte a del laboratorio: elaborar un grafo conexo pseudo aleatorio
+int main(){
+    //Elabora un grafo conexo pseudo aleatorio
     int fi;
     cout<<"Ingresar numero de vertices:  "<<endl;cin>>fi;
     //int matriz[fi][col];
@@ -229,14 +228,14 @@ int main()
 
     cout<<"Ingresar el vertice raiz: "<<endl;
     cin>>v;
-    //Parte b: Mediante el grafo conexo formamos un arbol generador por busqueda en profundidad
+    //Mediante el grafo conexo formamos un arbol generador por busqueda en profundidad
     vector<int> adyacencia[fi];
     vector<int> indices(fi);
 
     crearlista(adyacencia,fi,matriz,v,indices);
     imprimir(adyacencia,fi,indices);
     DFS(adyacencia,fi,indices);
-    //Parte c: Mediante el grafo conexo formamos un arbol generador por busqueda en abchura
+    //Mediante el grafo conexo formamos un arbol generador por busqueda en abchura
     BFS(adyacencia,fi,indices);
 
     return 0;
