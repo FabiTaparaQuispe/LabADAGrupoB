@@ -54,6 +54,33 @@ void mostrar(int **Ma, int fil){
         cout<<endl;
     }
 }
+//Creamos el archivo .dot para ver el grafo conexo
+void graphviz(int **Ma, int fil)
+{
+    cout<<"LISTA DE ADYACENCIA"<<endl;
+    ofstream f;
+    f.open("E:\\SISTEMAS\\CUARTO SEMESTRE\\ADA\\LABORATORIO\\Graphviz\\bin\\grafoconexo.dot");
+    f<<"graph A {"<<endl;
+    cout<<"graph A {"<<endl;
+    for(int i=0; i<fil;i++)
+    {
+        for(int j=0; j<fil; j++)
+        {
+            if(j>=i)
+            {
+                if(Ma[i][j]==1)
+                    {
+                        f<<i<<" -- "<<j<<";"<<endl;
+                        cout<<i<<" -- "<<j<<";"<<endl;
+                    }
+            }
+        }
+    }
+    f<<"}";
+    cout<<"}"<<endl;
+    f.close();
+}
+
 
 //Creamos una lista de adyacencia que usaremos para la busqueda en profundidad y en anchura
 void crearlista(vector<int> adyacencia[],int& numero,int**& matriz,int& inicio,vector<int>& indices){
