@@ -47,7 +47,7 @@ int main(){
    int matriz[][6]={{1,1,1,1,1,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,1,1,1,1,1}};
   //matriz que indica "0" aun no ha sido visitado y "1" que ya ha sido visitado
    print(matriz,6,6); 
-   llenado(matriz,6,6,1,1);//imprime la matriz con los numeros completos
+   llenado(matriz,6,6,5,5);//imprime la matriz con los numeros completos
 
    return 0;
 }
