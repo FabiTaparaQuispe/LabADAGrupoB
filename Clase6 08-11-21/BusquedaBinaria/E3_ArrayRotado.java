@@ -10,6 +10,7 @@ package Clase6 08-11-21;
 
 public class E3_ArrayRotado {
 	public static void main(String args[]) {
+		//casos de prueba
 		int[] array1 = { 2, 3, 6, 6, 7, 9, 15, 19 };
 		int[] array2 = {1, 3, 5, 7, 9, 11, 13, 18};
 
@@ -19,6 +20,7 @@ public class E3_ArrayRotado {
 	}
 
 	public static int lessSearch(int [] array){
+		// Este metodo buscar el menor elemento dentro de un array rotado
 		int l = 0;
 		int r = array.length-1;
 		int mid = 0;
