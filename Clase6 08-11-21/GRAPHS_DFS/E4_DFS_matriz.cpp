@@ -43,7 +43,7 @@ void llenado(int matriz[][6],int filas, int columnas, int posx,int posy){
 }
 
 //clase main para realizar los casos de prueba
-int E4_DFS_matriz(){ 
+int main(){ 
    int matriz[][6]={{1,1,1,1,1,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,0,0,0,0,1},{1,1,1,1,1,1}};
   //matriz que indica "0" aun no ha sido visitado y "1" que ya ha sido visitado
    print(matriz,6,6); 
