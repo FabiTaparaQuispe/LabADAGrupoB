@@ -11,36 +11,30 @@ package Clase6 08-11-21;
 public class E3_ArrayRotado {
 	public static void main(String args[]) {
 		int[] array1 = { 2, 3, 6, 6, 7, 9, 15, 19 };
-		int[] array2 = {9, 11, 14, 20, 4, 5, 6, 7};
-	
+		int[] array2 = {1, 3, 5, 7, 9, 11, 13, 18};
+
 		System.out.println("menor elemento de array 1 es: "+(lessSearch(array1)));
 		System.out.println("menor elemento de array 2 es: "+(lessSearch(array2)));
 
 	}
-	public static int lessSearch(int[] array) {
-		/*  Este metodo recibe un arreglo y el numero a buscar
-		 *  devuelve "-1" si no se encuentra el numero.
-		 */
-		int rpta = 0;
-		int mid=0;
+
+	public static int lessSearch(int [] array){
 		int l = 0;
 		int r = array.length-1;
-		while (l <= r) {	
-			mid = l + (r - l) / 2; // punto medio del arreglo
-			if(array[l] < array[mid]) {
-				rpta = array[l];
+		int mid = 0;
+		while(l <= r){
+			mid = ( l + r ) / 2;
+			if(array[l] < array[r]){  
+				r = mid;
+			}
+			else if(array[l] > array[r]){
 				l = mid;
 			}
-			else {
-				if(array[mid] < rpta) {
-					rpta = array[mid];
-					r = mid;
-				} else {
-					l++;
-				}
+			if(l == r){
+				return array[mid];
 			}
 		}
-		return rpta;
+		return array[mid]; 
 	}
 }
 
