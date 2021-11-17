@@ -10,6 +10,7 @@ package Clase6 08-11-21;
 
 public class E3_ArrayRotado {
 	public static void main(String args[]) {
+		//casos de prueba
 		int[] array1 = { 2, 3, 6, 6, 7, 9, 15, 19 };
 		int[] array2 = {9, 11, 14, 20, 4, 5, 6, 7};
 		int[] array3 = {6,8,10,12,1,2,3,5};
@@ -23,6 +24,9 @@ public class E3_ArrayRotado {
 	}
 
 	public static int lessSearch(int [] array){
+		/*  Este metodo recibe un arreglo, un left y un right
+		 *  Busca el menor elemento
+		 */
 		int l = 0;
 		int r = array.length-1;
 		int mid = 0;
@@ -32,14 +36,14 @@ public class E3_ArrayRotado {
 				r = mid;
 			}
 			else if(array[l] > array[r]){
-				if(array[l +1 ] < array[mid]){ 
-					l = l +1;
+				if(array[l +1 ] < array[mid]){ // si low es mayor 
+					l = l +1;//left +1 si es menor que middle
 				}
 				else {
 					l = mid;
 				}
 			}
-			if(l == r){
+			if(l == r){// si left y right son iguales 
 				return array[mid];
 			}
 		}
