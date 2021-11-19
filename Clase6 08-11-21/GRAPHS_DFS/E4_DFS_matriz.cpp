@@ -8,7 +8,7 @@
  */
 
 using namespace std;
-// clase que arma la matriz que delimita el espacio 
+// imprime la tabla
 void print(char matriz[][6],int filas, int columnas){
    for(int i=0;i<filas;i++){ //recorre las filas de la matriz
       for(int j=0;j<columnas;j++){ // recorre las columnas de la matriz
@@ -19,10 +19,10 @@ void print(char matriz[][6],int filas, int columnas){
 }
 // clase que llena la matriz, recibe un vector de tamanio de columnas de 6, el numero
 // de filas y columnas y sus posiciones asi como su desplazamiento x,y
-
+// llenado con DFS
 void llenadoPri(char matriz[][6],int& filas, int& columnas, int& posx,int& posy,int avax,int avay){
    if(matriz[avax+posx][avay+posy]!='#' && matriz[avax+posx][avay+posy]!='o'){
-     //si las posiciones de la matriz es diferente de 1 y diferente de dos, 
+     //si las posiciones de la matriz es diferente de "#" y diferente de "o", 
       posx=avax+posx;//al elemento de la posicion x se le agrega una posicion x
       posy=avay+posy;//al elemento de la posicion y se le agrega una posicion y
       matriz[posx][posy]='o';//la matriz recorre las posiciones "x" y "y"
@@ -52,7 +52,7 @@ int main(){
                      {'#','-','-','-','-','#'},
                      {'#','-','-','-','#','-'},
                      {'#','#','#','#','-','-'}};
-  //matriz que indica "0" aun no ha sido visitado y "1" que ya ha sido visitado
+  //matriz que indica "-" aun no ha sido visitado y "o" que ya ha sido visitado
    print(matriz,6,6); 
    llenado(matriz,6,6,1,1);//imprime la matriz con los numeros completos
 
