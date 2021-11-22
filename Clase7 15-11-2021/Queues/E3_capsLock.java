@@ -10,34 +10,34 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class E3_capsLock {
-	public static void main(String[] args) {
-		String texto = "abc$d@ef$@g$";
+	public static void main(String[] args) { 
+		String texto = "abc$d@ef$@g$"; //caso de prueba
 		capsLock(texto);
 	}
 
 	public static void capsLock(String str) {
 		Queue<Character> myQueue = enQueue(str);
-		System.out.println("Texto: " + myQueue);
-		String rpta = "", buffer = "";
-		boolean toUpperCase = false;
+		System.out.println("Texto: " + myQueue);//imprimimos la cola y su contenido
+		String rpta = "", text = ""; //vacio en un inicio
+		boolean toUpperCase = false;// mayusculas desactivadas
 		while(!myQueue.isEmpty()) {
-			Character specialCh = myQueue.poll();
-			if(specialCh == '$') {
-				if(toUpperCase) {
-					buffer = buffer.toUpperCase();
+			Character specialCh = myQueue.poll(); //desencola
+			if(specialCh == '$') { //desactiva
+				if(toUpperCase) { //devolver en mayuscula
+					text = text.toUpperCase();
 				} 
-				rpta += buffer;
-				buffer = "";
+				rpta += text;//acumula el texto liberado con $
+				text = "";
 				System.out.println("Resultado: " + rpta);
-			} else if(specialCh == '@') { 
+			} else if(specialCh == '@') { //lo vuelve en mayuscula
 				toUpperCase = !toUpperCase;
 			} else {
-				buffer += specialCh;
+				text += specialCh;
 			}
 		}
 	}
 
-	public static Queue<Character> enQueue(String str) {
+	public static Queue<Character> enQueue(String str) { //metodo que devuelve la cola resultante
 		Queue<Character> queue = new LinkedList<Character>();
 		for(Character c : str.toCharArray()) {
 			queue.add(c);
