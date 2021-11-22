@@ -5,6 +5,7 @@
  * mostrar la cantidad de aquellos que no lo estan usando una Pila.
  * Date: 15/11/21 
  */
+package Stack
 public class E2_parenthesesValid {
 	public static void main(String[] args) {
 		
