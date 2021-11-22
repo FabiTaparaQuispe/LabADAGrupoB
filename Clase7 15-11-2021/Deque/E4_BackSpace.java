@@ -16,7 +16,6 @@ class E4_BackSpace {
 
     private static String backSpace(String str) {
     	LinkedList<Character> myDeque = new LinkedList<Character>();
-	//use LinkedList en vez de Deque
         for (char especialCh: str.toCharArray()) {
             if (especialCh != '#') { //si es diferente a #
                 myDeque.push(especialCh); //lo encola
