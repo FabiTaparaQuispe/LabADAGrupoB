@@ -7,29 +7,29 @@ import java.util.LinkedList;
  * indica eliminar el caracter anterior usando la estructura Deque.
  * Date: 15/11/21 
  */
-class Solution {
+class E4_BackSpace {
 	public static void main(String[] args) {
+		//caso de prueba
 		String texto = "abc#de##f#ghi#jklmn#op#";
-		System.out.println(build(texto));
+		System.out.println(backSpace(texto));
 	}
 
-    private static String build(String s) {
+    private static String backSpace(String str) {
     	LinkedList<Character> myDeque = new LinkedList<Character>();
-	
-        for (char especialCh: s.toCharArray()) {
-            if (especialCh != '#') {
-                myDeque.push(especialCh);
-            } else if (!myDeque.isEmpty()) {
-                myDeque.pop();
+	//use LinkedList en vez de Deque
+        for (char especialCh: str.toCharArray()) {
+            if (especialCh != '#') { //si es diferente a #
+                myDeque.push(especialCh); //lo encola
+            } else if (!myDeque.isEmpty()) {//verifica que no este vacio
+                myDeque.pop();//si es "#" elimina al anterior
             }
         }
-    	System.out.println("Texto al reves: " + myDeque + "\n");
         System.out.println("Respuesta: ");
-        StringBuilder sb = new StringBuilder();
+        StringBuilder str_Builder = new StringBuilder();
         while (!myDeque.isEmpty()) {
-            sb.append(myDeque.pop());
+        	str_Builder.append(myDeque.pop());//recorre la cola
         }
-        
-        return sb.reverse().toString();
+        //toString
+        return str_Builder.reverse().toString();//para imprimir la respuesta 
     }
 }
