@@ -1,3 +1,4 @@
+package Queues
 /* 
  * Ejercicio 3 Caps Lock
  * Autor: Fabiola Tapara Quispe
