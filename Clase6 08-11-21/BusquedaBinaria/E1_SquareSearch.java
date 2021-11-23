@@ -1,5 +1,4 @@
 package Clase6 08-11-21;
-import java.util.Scanner;
 /* 
  * Ejercicio 1 SquareSearch
  * Autor: Fabiola Tapara Quispe
@@ -10,11 +9,12 @@ import java.util.Scanner;
 
 class E1_SquareSearch {
 	public static void main(String args[]) {
-		Scanner s = new Scanner(System.in);
-		System.out.println("Ingrese el valor a buscar: ");
-		int numberSearch = s.nextInt();
-		System.out.println((binarySearch(numberSearch)));
-
+		System.out.println((binarySearch(7)));
+		System.out.println((binarySearch(16)));
+		System.out.println((binarySearch(49)));
+		System.out.println((binarySearch(4)));
+		System.out.println((binarySearch(11)));
+		System.out.println((binarySearch(13)));
 	}
 
 	public static int binarySearch(int numberSearch) {
