@@ -21,8 +21,8 @@ def division (a, b):
 def polishReverse(input):
     operadores = "+-*/"
     string = []
-    list = input.split(" ")
-    for  i in list:  
+    listado = input.split(" ")
+    for  i in listado:  
         if (i in operadores):
             num2 = string.pop()
             num1 = string.pop()
