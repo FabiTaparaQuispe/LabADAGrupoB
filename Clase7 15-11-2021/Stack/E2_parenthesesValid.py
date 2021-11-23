@@ -1,3 +1,4 @@
+#!/usr/bin/python
 ''''
  * Ejercicio 2 MinimumAddtoMakeParenthesesValid
  * Autor: Fabiola Tapara Quispe
