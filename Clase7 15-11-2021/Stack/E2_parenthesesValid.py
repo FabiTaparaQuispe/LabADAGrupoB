@@ -25,13 +25,10 @@ def parenthesisValid(str):
 
 ## caso de prueba
 input1 = parenthesisValid("())")
-print(input1)
 print(len(input1))
 
-input3 = parenthesisValid("(()))(")
-print(input3)
+input2 = parenthesisValid("(()))(")
 print(len(input3))
 
 input3 = parenthesisValid("()))((")
-print(input3)
 print(len(input3))
