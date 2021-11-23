@@ -8,20 +8,9 @@ import java.util.Scanner;
  * Date: 08/11/21 
  */
 
-import java.util.Scanner;
-
 public class E2_InmediatoMayor {
 	public static void main(String args[]) {
 		int[] array = { 2, 3, 6, 6, 7, 9, 15, 19 };
-		Scanner s = new Scanner(System.in);
-		System.out.println("Ingrese el valor a buscar: ");
-		int numberSearch = s.nextInt();
-		int value=(inmediatoMayorSearch(array, numberSearch));
-		if (value == -1)
-			System.out.println("No se encontró");
-		else {
-			System.out.print("El inmediato igual o mayor es: "+value);
-		}
 		//casos de prueba
 		System.out.println();
 		System.out.println("Mayor o igual a 10: " + inmediatoMayorSearch(array, 10) + "\n");
