@@ -42,7 +42,7 @@ public class E1_UniquePathII {
 				}
 			}
 		}
-		print(caminos);
+		//print(caminos);
 		// Devolvemos el contenido de la ultima celda 
 		return caminos[fila - 1][col - 1];
 	}
