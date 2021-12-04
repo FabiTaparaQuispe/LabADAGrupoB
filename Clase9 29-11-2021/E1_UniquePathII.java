@@ -1,4 +1,4 @@
-package Clase8 29-11-2021;
+package Clase9 29-11-2021;
 /* 
  * Ejercicio 1 Unique Path II
  * Autor: Fabiola Tapara Quispe
@@ -11,45 +11,53 @@ package Clase8 29-11-2021;
 public class E1_UniquePathII {
 	//caso de prueba
 	public static void main(String[] args) {
+		//caso de prueba
 		int obstacleGrid [][] = {{0,0,0},{0,1,0},{0,0,0}};
-		matriz(obstacleGrid);
 		print(obstacleGrid);
 		System.out.println("N Caminos: " + uniquePathsWithObstacles(obstacleGrid));
 	}
 	public static int uniquePathsWithObstacles(int[][] obstacleGrid) {
-		//este metodo devuelve el numero de caminos
-		int o = obstacleGrid[0].length;//matriz "o"
-		int [] auxiliar = new int [o];//variable auxiliar para las comparaciones
-		auxiliar[0]=1; //inicializo en 1  
-		//se establen parametros, se modifica la entrada
-
-		for(int i = 0; i < obstacleGrid.length; i++) {
-			for(int j = 0 ; j < o; j ++) {
-				if(obstacleGrid[i][j]==1) {
-					auxiliar[j] = 0;
+		//Este metodo recibe el arreglo bidimensional, la matriz
+		int fila = obstacleGrid.length, col = obstacleGrid[0].length;
+		System.out.println("Fila: " + fila + ", Columnas: " + col);
+		int[][] caminos = new int[fila][col];
+		//Iteramos para poder encontrar los posibles caminos para llegar al destino	
+		for (int j = 0; j < obstacleGrid.length; j++) {
+			for (int i = 0; i < obstacleGrid[j].length; i++) {
+				// Verificamos si es un obstaculo
+				if (obstacleGrid[j][i] == 1) {//lenamos la primera fila y columna de uno
+					caminos[j][i] = 0;//si se encuantra un obstaculo cambia a cero
+					continue;
 				}
-				else { // esto sera para j >0
-					if(j > 0) {
-						auxiliar[j] += auxiliar[j-1];
-					}
+				// solo nos podemos mover hacia abajo y derecha
+				// las posiciones son: arriba e izquierda
+				if (i - 1 < 0 && j - 1 < 0) {
+					caminos[j][i] = 1;					
+				} else if (i - 1 < 0) {// lado izquierdo
+					caminos[j][i] = caminos[j - 1][i]; 
+				} else if (j - 1 < 0) {
+					caminos[j][i] = caminos[j][i - 1];
+				} else {
+					caminos[j][i] = caminos[j - 1][i] + caminos[j][i - 1];
 				}
 			}
 		}
-		return auxiliar[o-1];
-	}
-	public static void matriz(int [][] o){
-		o[1][1] = 1;// llenado de la matriz inicial
+		print(caminos);
+		// Devolvemos el contenido de la ultima celda 
+		return caminos[fila - 1][col - 1];
 	}
 
 	// Para imprimir la matriz inicial 
-	public static void print(int [][] all){
-		for (int i = 0; i < all.length; i++) {
+	public static void print(int [][] caminos){
+
+		for (int i = 0; i < caminos.length; i++) {
 			System.out.println();
-			for (int j = 0; j < all[i].length; j++) {
-				System.out.print(all[i][j] + "\t");
+			for (int j = 0; j < caminos[i].length; j++) {
+				System.out.print(caminos[i][j] + "\t");
 			}
 		}
 		System.out.println();
 	}
 }
+
 
